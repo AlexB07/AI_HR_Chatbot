@@ -1,0 +1,209 @@
+{"intents":[
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there", "Hello", "Good day", "whats up","greetings"],
+         "responses": ["Hello, Could I have your personal ID number?", "Good to see you again, could I have your personal ID number?", "Hi there, Could I have your personal ID number?"],
+         "context_set": "employeenumber" 
+		},
+		{"tag": "employeenum",
+         "patterns": ["1790136691"],
+         "responses": ["Thank you, What may I help you with?", "Thanks, how can I help?", "Great!, how can I help?"],
+		 "context_filter":"employeenumber"
+		 },
+		{"tag": "whatnum",
+         "patterns": ["Yes my ID number is, 1790136691", "179036691", "179013669"],
+         "responses": ["I don't need this right now", "Thanks, But I don't need this"]
+		 },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye!"]        
+		 },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "Thats helpful", "thankyou"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+		 "context_set": ""
+        },
+		{"tag": "okay",
+         "patterns": ["okay", "ok", "kk" ],
+         "responses": ["Is there anything else I can help you with?", "Is there anything else?"]
+		},
+        {"tag": "hours",
+         "patterns": ["What hours am i working tomorrow", "what hours am i working this week", "what hours am i working" ],
+         "responses": ["You are working 8am - 5.30pm", "You are working from 8am to 5.30pm", "Hours working: 8am - 5.30pm"]
+		},
+        {"tag": "holidays",
+         "patterns": ["How many holidays do I have", "How many holidays left", "how many holidays do i have left" ],
+         "responses": ["You have 12 Holidays left", "You have 12 left", "You've got 12 days left"]
+		},
+		{"tag": "bookholidays",
+         "patterns": ["How can i book a holiday", "how can i book a holiday for next week","how can i book a vacation" ],
+         "responses": ["You can do this by asking your manager", "You can do this by asking your manager, who will then ask us."]
+		},
+		{"tag": "salaryhour",
+         "patterns": ["how much do i get paid an hour", "whats my hourly pay", "whats my hourly pay", "Do i get paid hourly"],
+         "responses": ["You get paid between £10.50 to £15.50, depending on overtime"]
+		},
+		{"tag": "salary",
+         "patterns": ["how much do i earn", "how much do i get month"],
+         "responses": ["You earn £2,250 per month (before tax)", "You get £1,800 per month (after tax) "]
+		},
+		{"tag": "training",
+         "patterns": ["what are the opportunities for training and professional developments", "Are there any opportunities for advancement within the organisation", "Is there any training i can do", "Is there any training available", "Can I progress my career" ],
+         "responses": ["You can contact your manager about additional training available", "You can email HR at HR@company.co.uk about additional training"]
+		},
+		{"tag": "hrcontact",
+         "patterns": ["how do i contact hr", "contact hr", "hr contacts", "What is the phone number for hr", "what is the email for hr", "what is the website for hr", "what is the email for human resources", "what is the phone number for human resources", "what is the website for human resources"],
+         "responses": ["What type of contact would you like; phone number, email, website"],
+		 "context_set": "hrcontacts"
+		},
+		{"tag": "hrcontactphonenumber",
+         "patterns": ["Whats the hr phone number", "what is the hr phone number", "what is the human resources phone number"],
+         "responses": ["You can call HR on 01904 480091"]
+		},
+		{"tag": "hrcontactemail",
+         "patterns": ["Whats the hr email address", "what is the hr email", "what is the human resources email address"],
+         "responses": ["You can email them on hr@company.co.uk"]
+		},
+		{"tag": "hrcontactwebsite",
+         "patterns": ["Whats the hr website", "what is the hr website", "what is the human resources website"],
+         "responses": ["You can visit the HR sector on the website www.company.co.uk/hr"]
+		},
+		{"tag": "hrphone",
+         "patterns": ["Phone Number"],
+         "responses": ["You can call them on 01904 480091"],
+		 "context_filter": "hrcontacts"
+		},
+		{"tag": "hremail",
+         "patterns": ["Email"],
+         "responses": ["You can email them on hr@company.co.uk"],
+		 "context_filter": "hrcontacts"
+		},
+		{"tag": "hrwebsite",
+         "patterns": ["website"],
+         "responses": ["You can visit the HR sector on the website www.company.co.uk/hr"],
+		 "context_filter": "hrcontacts"
+		},
+		{"tag": "payrise",
+         "patterns": ["Can i have a pay rise", "may i have a pay rise", "pay-rise", "how can i get a pay rise"],
+         "responses": ["You will have to contact your manager about getting a payrise"]
+		},
+		{"tag": "charities",
+         "patterns": ["what charities does the organisation support", "what charities do we support", "what charities does the company support" ],
+         "responses": ["The company supports many charities including; Marie Curie, Cancer UK, BHF and many more..."]
+		},
+		{"tag": "healthbenefits",
+         "patterns": ["Does the company have any health benefits", "Do i recieve any health benefits", "what are the health benefits of this job" ],
+         "responses": ["Employee health benefits include, Health Insurance, Life Insurance and many others. Log in to your portal to find out more."]
+		},
+		{"tag": "sickbenefits",
+         "patterns": ["do i get paid when taking sick days", "do i get sick pay", "Does the company do sick benefits","do i get paid holiday"],
+         "responses": ["Employee's get sick days and holidays with pay"]
+		},
+		{"tag": "remoteworking",
+         "patterns": ["can i work remotely from home", "would working from home be possible", "is remotely working from home possible"],
+         "responses": ["Yes, you can work remotely from home 1 day a week, as long as you meet the deadlines set. Due to Covid-19 you can remotely work from home until further notice."]
+		},
+		{"tag": "pension",
+         "patterns": ["What schemes of pensions do you have", "what pensions schemes do you do", "do you assist with pension pay in" ],
+         "responses": ["The company pays 20% of your salary to your pension each month if, you pay 10% each month"]
+		},
+		{"tag": "annualreview",
+         "patterns": ["when is my annual review", "what is my annual review"],
+         "responses": ["Your annual review is every 6 months and includes checking you are being paid enough, and to see if there is anymore training for you to do."]
+		},
+		{"tag": "staffturnover",
+         "patterns": ["What is the staff turn over", "whats the staff turn over", "what is the staff turnover"],
+         "responses": ["The staff turn over ranges from 12 months to 30 years"]
+		},
+		{"tag": "personalissues",
+         "patterns": ["i have some personal issues", "can we talk about personal issues"],
+         "responses": ["I can't talk about this, but contacting your HR department can help."]
+		},
+		{"tag": "emergencycontact",
+         "patterns": ["Whats the emergency contact number","whats the emergency contact", "whats the emergency disaster pandemic contact details?"],
+         "responses": ["The contact number for emergencies only is 07123456778"]
+		 },
+		{"tag": "parkingpermit",
+         "patterns": ["Is it possible to get a parking permit","How can I get a parking permit","Where can I get a parking permit from"],
+         "responses": ["Have you lost your parking permit?"],
+		 "context_set": "parking"
+		},
+		{"tag": "parkingpermitnotlost",
+         "patterns": ["No"],
+         "responses": ["You should have been given a parking permit when you were employeed but, if you didn't then you can apply on the website www.company.co.uk/parking_permits"],
+		 "context_filter": "parking"
+		},
+		{"tag": "parkingpermitlost",
+         "patterns": ["Yes"],
+         "responses": ["Pleaseapply on the website www.company.co.uk/lost_permits to get another parking permit"],
+		 "context_filter": "parking"
+		},
+		{"tag": "dresscode",
+         "patterns": ["What is the dress code","Is there a dress code"],
+         "responses": ["The dress code is smart casual"]
+		},
+		{"tag": "complaints",
+         "patterns": ["where can i file a complaint","Is there a place I can file a complaint"],
+         "responses": ["You can email complaints@company.co.uk"]
+		},
+		{"tag": "medicalroom",
+         "patterns": ["where can i find the medical room","Do we have a medical room", "Does the company have a medical room", "Is there a first aid person", "Is there a first aid room"],
+         "responses": ["Yes the company has a medical room, you can locate it using the map found on the website www.company.co.uk/map"]
+		},
+		{"tag": "dataprotection",
+         "patterns": ["what do you do with my data","How do you process my data"],
+         "responses": ["We process your data following all the rules set by the GDPR and data Protection act 2018"]
+		},
+		{"tag": "securitycard",
+         "patterns": ["How do I get a security card","Can I get a security card", "Ive lost my security card","I can not find my security card", "I cant find my security card"],
+         "responses": ["Have you lost your security card?"],
+		 "context_set": "lostsecuritycard"
+		},
+		{"tag": "securitylostyes",
+         "patterns": ["yes"],
+         "responses": ["You will have to apply for another one at www.company.co.uk/lost_card"],
+		 "context_filter": "lostsecuritycard"
+		},
+		{"tag": "securitylostno",
+         "patterns": ["no"],
+         "responses": ["If you were not given one when you joined the company, then you should ask your manager to send an email to the security department for you to go collect one"],
+		 "context_set": "lostsecuritycard"
+		},
+		{"tag": "changedetails",
+         "patterns": ["Can I update my details","Can I change my personal data","How do I update my details"],
+         "responses": ["What would you like to update; phone number, address, email"],
+		 "context_set": "updatedetails"
+		},
+		{"tag": "updateemail",
+         "patterns": ["address"],
+         "responses": ["Send your updated details to hr@company.co.uk, with your person ID number"],
+		 "context_filter":"updatedetails"
+		},
+		{"tag": "updatephone",
+         "patterns": ["phone number"],
+         "responses": ["Log in to your account at www.company@work.co.uk and update your phone number"],
+		 "context_filter":"updatedetails"
+		},
+		{"tag": "updateemail",
+         "patterns": ["email"],
+         "responses": ["Log in to your account at www.company@work.co.uk and update your email from there"],
+		 "context_filter":"updatedetails"
+		},
+		{"tag": "changeemail",
+         "patterns": ["Can I update my email address","Can I change my email address","How do I update my email"],
+         "responses": ["Log in to your account at www.company@work.co.uk and update your email from there"]
+		},
+		{"tag": "changephone",
+         "patterns": ["Can I update my phone number","Can I change my phone number","How do I update my phone number"],
+         "responses": ["Log in to your account at www.company@work.co.uk and update your phone number"]
+		},
+		{"tag": "changeaddress",
+         "patterns": ["Can I update my address","Can I change my address","How do I update my address"],
+         "responses": ["Send your updated details to hr@company.co.uk, with your person ID number"]
+		},
+		{"tag": "noanswer",
+         "patterns": [""],
+         "responses": ["Sorry, I can't understand you", "Please try and rephrase your question", "Not sure I understand", "Please ask me a HR question"]
+        }
+	]
+		
+}
